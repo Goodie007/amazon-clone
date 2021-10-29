@@ -1,21 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView,} from 'react-native';
+
+import HomeScreen from './src/screens/HomeScreen';
+import ProductScreen from './src/screens/Products/ProductScreen';
+import ShoppingCartScreen from './src/screens/ShoppingCartScreen/ShoppingCartScreen';
+import AddressScreen from './src/screens/AddressScreen/AddressScreen';
+import Router from './src/Router/Router';
+import HomeStack from './src/Router/HomeStack';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={styles.backgroundStyle}>
+      <Router />
       <StatusBar style="auto" />
     </View>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {
+  backgroundStyle: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  }
+})
+
